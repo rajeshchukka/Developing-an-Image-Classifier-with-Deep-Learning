@@ -1,0 +1,586 @@
+root@48c2ad98bbe4:/home/workspace# python train.py data_dir
+python: can't open file 'train.py': [Errno 2] No such file or directory
+root@48c2ad98bbe4:/home/workspace# cd aim
+bash: cd: aim: No such file or directory
+root@48c2ad98bbe4:/home/workspace# cd aipnd-project/
+root@48c2ad98bbe4:/home/workspace/aipnd-project# ls
+assets            flowers                         LICENSE         predict_utils.py  train.py
+cat_to_name.json  Image Classifier Project.html   model_utils.py  __pycache__       workspace-utils.py
+data_dir          Image Classifier Project.ipynb  predict.py      README.mdroot@48c2ad98bbe4:/home/workspace/aipnd-project# python train.py data_directory
+Data directory: data_directory
+Training on CPU.
+Architecture: densenet121
+Learning rate: 0.001
+Hidden units: 512
+Epochs: 8
+Traceback (most recent call last):
+  File "train.py", line 114, in <module>
+    main()
+  File "train.py", line 78, in main
+    dataloaders, class_to_idx = model_utils.get_loaders(args.data_dir)
+  File "/home/workspace/aipnd-project/model_utils.py", line 40, in get_loaders
+    'training' : datasets.ImageFolder(train_dir, transform=data_transforms['training']),
+  File "/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/datasets/folder.py", line 178, in__init__
+  File "/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/datasets/folder.py", line 75, in __init__
+  File "/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/datasets/folder.py", line 23, in find_classes
+FileNotFoundError: [Errno 2] No such file or directory: 'data_directory/train/'
+root@48c2ad98bbe4:/home/workspace/aipnd-project# python train.py data_dir
+Data directory: data_dir
+Training on CPU.
+Architecture: densenet121
+Learning rate: 0.001
+Hidden units: 512
+Epochs: 8
+Traceback (most recent call last):
+  File "train.py", line 114, in <module>
+    main()
+  File "train.py", line 78, in main
+    dataloaders, class_to_idx = model_utils.get_loaders(args.data_dir)
+  File "/home/workspace/aipnd-project/model_utils.py", line 40, in get_loaders
+    'training' : datasets.ImageFolder(train_dir, transform=data_transforms['training']),
+  File "/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/datasets/folder.py", line 178, in__init__
+  File "/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/datasets/folder.py", line 75, in __init__
+  File "/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/datasets/folder.py", line 23, in find_classes
+FileNotFoundError: [Errno 2] No such file or directory: 'data_dir/train/'
+root@48c2ad98bbe4:/home/workspace/aipnd-project# python train.py
+usage: train.py [-h] [--gpu] [--save_dir SAVE_DIR]
+                [--arch {vgg13_bn,densenet121,resnet18,resnet50,vgg19_bn,densenet161,resnet34,vgg16_bn,densenet201}]
+                [--learning_rate LEARNING_RATE] [--hidden_units HIDDEN_UNITS]
+                [--epochs EPOCHS]
+                data_dir
+train.py: error: the following arguments are required: data_dir
+root@48c2ad98bbe4:/home/workspace/aipnd-project# python train.py data_dir
+Data directory: data_dir
+Training on CPU.
+Architecture: densenet121
+Learning rate: 0.001
+Hidden units: 512
+Epochs: 8
+Traceback (most recent call last):
+  File "train.py", line 114, in <module>
+    main()
+  File "train.py", line 78, in main
+    dataloaders, class_to_idx = model_utils.get_loaders(args.data_dir)
+  File "/home/workspace/aipnd-project/model_utils.py", line 40, in get_loaders
+    'training' : datasets.ImageFolder(train_dir, transform=data_transforms['training']),
+  File "/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/datasets/folder.py", line 178, in__init__
+  File "/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/datasets/folder.py", line 75, in __init__
+  File "/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/datasets/folder.py", line 23, in find_classes
+FileNotFoundError: [Errno 2] No such file or directory: 'data_dir/train/'
+root@48c2ad98bbe4:/home/workspace/aipnd-project# python train.py data_dir
+Data directory: data_dir
+Training on CPU.
+Architecture: densenet121
+Learning rate: 0.001
+Hidden units: 512
+Epochs: 8
+Traceback (most recent call last):
+  File "train.py", line 114, in <module>
+    main()
+  File "train.py", line 78, in main
+    dataloaders, class_to_idx = model_utils.get_loaders(args.data_dir)
+  File "/home/workspace/aipnd-project/model_utils.py", line 40, in get_loaders
+    'training' : datasets.ImageFolder(train_dir, transform=data_transforms['training']),
+  File "/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/datasets/folder.py", line 178, in__init__
+  File "/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/datasets/folder.py", line 79, in __init__
+RuntimeError: Found 0 files in subfolders of: data_dir/train/
+Supported extensions are: .jpg,.jpeg,.png,.ppm,.bmp,.pgm,.tif
+root@48c2ad98bbe4:/home/workspace/aipnd-project# python train.py flowers\train
+Data directory: flowerstrain
+Training on CPU.
+Architecture: densenet121
+Learning rate: 0.001
+Hidden units: 512
+Epochs: 8
+Traceback (most recent call last):
+  File "train.py", line 114, in <module>
+    main()
+  File "train.py", line 78, in main
+    dataloaders, class_to_idx = model_utils.get_loaders(args.data_dir)
+  File "/home/workspace/aipnd-project/model_utils.py", line 40, in get_loaders
+    'training' : datasets.ImageFolder(train_dir, transform=data_transforms['training']),
+  File "/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/datasets/folder.py", line 178, in__init__
+  File "/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/datasets/folder.py", line 75, in __init__
+  File "/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/datasets/folder.py", line 23, in find_classes
+FileNotFoundError: [Errno 2] No such file or directory: 'flowerstrain/train/'
+root@48c2ad98bbe4:/home/workspace/aipnd-project# python train.py train
+Data directory: train
+Training on CPU.
+Architecture: densenet121
+Learning rate: 0.001
+Hidden units: 512
+Epochs: 8
+Traceback (most recent call last):
+  File "train.py", line 114, in <module>
+    main()
+  File "train.py", line 78, in main
+    dataloaders, class_to_idx = model_utils.get_loaders(args.data_dir)
+  File "/home/workspace/aipnd-project/model_utils.py", line 40, in get_loaders
+    'training' : datasets.ImageFolder(train_dir, transform=data_transforms['training']),
+  File "/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/datasets/folder.py", line 178, in__init__
+  File "/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/datasets/folder.py", line 75, in __init__
+  File "/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/datasets/folder.py", line 23, in find_classes
+FileNotFoundError: [Errno 2] No such file or directory: 'train/train/'
+root@48c2ad98bbe4:/home/workspace/aipnd-project# python train.py flowers
+Data directory: flowers
+Training on CPU.
+Architecture: densenet121
+Learning rate: 0.001
+Hidden units: 512
+Epochs: 8
+training data loader retrieved
+testing data loader retrieved
+validation data loader retrieved
+/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/models/densenet.py:212: UserWarning: nn.init.kaiming_normal is now deprecated in favor of nn.init.kaiming_normal_.
+Downloading: "https://download.pytorch.org/models/densenet121-a639ec97.pth" to /root/.torch/models/densenet121-a639ec97.pth
+100%|¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 32342954/32342954 [00:01<00:00, 22195349.99it/s]
+Pretrained model retrieved.
+Beginning model training
+/home/workspace/aipnd-project/model_utils.py:154: UserWarning: invalid index of a 0-dim tensor. This will be an error inPyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  running_loss += loss.data[0]
+Validating the model
+/home/workspace/aipnd-project/model_utils.py:177: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  inputs = Variable(inputs, volatile=True)
+/home/workspace/aipnd-project/model_utils.py:178: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  labels = Variable(labels, volatile=True)
+/home/workspace/aipnd-project/model_utils.py:180: UserWarning: invalid index of a 0-dim tensor. This will be an error inPyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  test_loss += criterion(output, labels).data[0]
+Epoch: 1/8  Train Loss: 4.113  Val. Loss: 3.415  Val. Acc.: 0.280
+^Z
+[1]+  Stopped                 python train.py flowers
+root@48c2ad98bbe4:/home/workspace/aipnd-project# python train.py --gpu  flowers
+Data directory: flowers
+Training on GPU.
+Architecture: densenet121
+Learning rate: 0.001
+Hidden units: 512
+Epochs: 8
+training data loader retrieved
+testing data loader retrieved
+validation data loader retrieved
+/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/models/densenet.py:212: UserWarning: nn.init.kaiming_normal is now deprecated in favor of nn.init.kaiming_normal_.
+Pretrained model retrieved.
+GPU is availaible. Moving Tensors.
+Beginning model training
+/home/workspace/aipnd-project/model_utils.py:154: UserWarning: invalid index of a 0-dim tensor. This will be an error inPyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  running_loss += loss.data[0]
+Validating the model
+/home/workspace/aipnd-project/model_utils.py:174: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  inputs = Variable(inputs.float().cuda(), volatile=True)
+/home/workspace/aipnd-project/model_utils.py:175: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  labels = Variable(labels.long().cuda(), volatile=True)
+/home/workspace/aipnd-project/model_utils.py:180: UserWarning: invalid index of a 0-dim tensor. This will be an error inPyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  test_loss += criterion(output, labels).data[0]
+Epoch: 1/8  Train Loss: 4.173  Val. Loss: 3.422  Val. Acc.: 0.300
+Validating the model
+Epoch: 1/8  Train Loss: 2.889  Val. Loss: 2.235  Val. Acc.: 0.502
+Validating the model
+Epoch: 2/8  Train Loss: 0.727  Val. Loss: 1.544  Val. Acc.: 0.659
+Validating the model
+Epoch: 2/8  Train Loss: 1.479  Val. Loss: 1.086  Val. Acc.: 0.747
+Validating the model
+Epoch: 2/8  Train Loss: 1.214  Val. Loss: 0.966  Val. Acc.: 0.755
+Validating the model
+Epoch: 3/8  Train Loss: 0.921  Val. Loss: 0.830  Val. Acc.: 0.798
+Validating the model
+Epoch: 3/8  Train Loss: 0.959  Val. Loss: 0.750  Val. Acc.: 0.828
+Validating the model
+Epoch: 4/8  Train Loss: 0.234  Val. Loss: 0.624  Val. Acc.: 0.835
+Validating the model
+Epoch: 4/8  Train Loss: 0.863  Val. Loss: 0.692  Val. Acc.: 0.818
+Validating the model
+Epoch: 4/8  Train Loss: 0.791  Val. Loss: 0.637  Val. Acc.: 0.818
+Validating the model
+Epoch: 5/8  Train Loss: 0.511  Val. Loss: 0.597  Val. Acc.: 0.833
+Validating the model
+Epoch: 5/8  Train Loss: 0.718  Val. Loss: 0.497  Val. Acc.: 0.874
+Validating the model
+Epoch: 6/8  Train Loss: 0.076  Val. Loss: 0.513  Val. Acc.: 0.864
+Validating the model
+Epoch: 6/8  Train Loss: 0.642  Val. Loss: 0.452  Val. Acc.: 0.891
+Validating the model
+Epoch: 6/8  Train Loss: 0.646  Val. Loss: 0.479  Val. Acc.: 0.871
+Validating the model
+Epoch: 7/8  Train Loss: 0.322  Val. Loss: 0.420  Val. Acc.: 0.894
+Validating the model
+Epoch: 7/8  Train Loss: 0.566  Val. Loss: 0.449  Val. Acc.: 0.886
+Validating the model
+Epoch: 7/8  Train Loss: 0.570  Val. Loss: 0.472  Val. Acc.: 0.869
+Validating the model
+Epoch: 8/8  Train Loss: 0.523  Val. Loss: 0.446  Val. Acc.: 0.878
+Validating the model
+Epoch: 8/8  Train Loss: 0.547  Val. Loss: 0.392  Val. Acc.: 0.892
+Will save checkpoint to densenet121_checkpoint.pth
+Checkpoint saved
+Validating the model
+Test Loss: 0.459
+Test Acc.: 0.878
+root@48c2ad98bbe4:/home/workspace/aipnd-project# python train.py --gpu flowers --arch "vgg13"
+usage: train.py [-h] [--gpu] [--save_dir SAVE_DIR]
+                [--arch {resnet18,vgg13_bn,densenet161,resnet50,vgg16_bn,resnet34,vgg19_bn,densenet201,densenet121}]
+                [--learning_rate LEARNING_RATE] [--hidden_units HIDDEN_UNITS]
+                [--epochs EPOCHS]
+                data_dir
+train.py: error: argument --arch: invalid choice: 'vgg13' (choose from 'resnet18', 'vgg13_bn', 'densenet161', 'resnet50', 'vgg16_bn', 'resnet34', 'vgg19_bn', 'densenet201', 'densenet121')
+root@48c2ad98bbe4:/home/workspace/aipnd-project# python train.py --gpu flowers --arch "densenet161"
+Data directory: flowers
+Training on GPU.
+Architecture: densenet161
+Learning rate: 0.001
+Hidden units: 512
+Epochs: 8
+training data loader retrieved
+testing data loader retrieved
+validation data loader retrieved
+/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/models/densenet.py:212: UserWarning: nn.init.kaiming_normal is now deprecated in favor of nn.init.kaiming_normal_.
+Downloading: "https://download.pytorch.org/models/densenet161-8d451a50.pth" to /root/.torch/models/densenet161-8d451a50.pth
+100%|¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 115730790/115730790 [00:04<00:00, 28407812.48it/s]
+Pretrained model retrieved.
+GPU is availaible. Moving Tensors.
+Beginning model training
+/home/workspace/aipnd-project/model_utils.py:154: UserWarning: invalid index of a 0-dim tensor. This will be an error inPyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  running_loss += loss.data[0]
+Validating the model
+/home/workspace/aipnd-project/model_utils.py:174: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  inputs = Variable(inputs.float().cuda(), volatile=True)
+/home/workspace/aipnd-project/model_utils.py:175: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  labels = Variable(labels.long().cuda(), volatile=True)
+/home/workspace/aipnd-project/model_utils.py:180: UserWarning: invalid index of a 0-dim tensor. This will be an error inPyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  test_loss += criterion(output, labels).data[0]
+Epoch: 1/8  Train Loss: 4.056  Val. Loss: 3.312  Val. Acc.: 0.335
+Validating the model
+Epoch: 1/8  Train Loss: 2.785  Val. Loss: 2.134  Val. Acc.: 0.541
+Validating the model
+Epoch: 2/8  Train Loss: 0.707  Val. Loss: 1.457  Val. Acc.: 0.690
+Validating the model
+Epoch: 2/8  Train Loss: 1.308  Val. Loss: 1.062  Val. Acc.: 0.767
+Validating the model
+Epoch: 2/8  Train Loss: 1.069  Val. Loss: 0.895  Val. Acc.: 0.789
+Validating the model
+Epoch: 3/8  Train Loss: 0.793  Val. Loss: 0.769  Val. Acc.: 0.806
+Validating the model
+Epoch: 3/8  Train Loss: 0.832  Val. Loss: 0.683  Val. Acc.: 0.829
+Validating the model
+Epoch: 4/8  Train Loss: 0.175  Val. Loss: 0.584  Val. Acc.: 0.864
+Validating the model
+Epoch: 4/8  Train Loss: 0.672  Val. Loss: 0.555  Val. Acc.: 0.867
+Validating the model
+Epoch: 4/8  Train Loss: 0.629  Val. Loss: 0.541  Val. Acc.: 0.862
+Validating the model
+Epoch: 5/8  Train Loss: 0.383  Val. Loss: 0.458  Val. Acc.: 0.881
+Validating the model
+Epoch: 5/8  Train Loss: 0.608  Val. Loss: 0.483  Val. Acc.: 0.875
+Validating the model
+Epoch: 6/8  Train Loss: 0.061  Val. Loss: 0.433  Val. Acc.: 0.897
+Validating the model
+Epoch: 6/8  Train Loss: 0.525  Val. Loss: 0.433  Val. Acc.: 0.890
+Validating the model
+Epoch: 6/8  Train Loss: 0.499  Val. Loss: 0.361  Val. Acc.: 0.908
+Validating the model
+Epoch: 7/8  Train Loss: 0.260  Val. Loss: 0.405  Val. Acc.: 0.899
+Validating the model
+Epoch: 7/8  Train Loss: 0.483  Val. Loss: 0.378  Val. Acc.: 0.909
+Validating the model
+Epoch: 7/8  Train Loss: 0.479  Val. Loss: 0.385  Val. Acc.: 0.893
+Validating the model
+Epoch: 8/8  Train Loss: 0.477  Val. Loss: 0.367  Val. Acc.: 0.909
+Validating the model
+Epoch: 8/8  Train Loss: 0.465  Val. Loss: 0.347  Val. Acc.: 0.910
+Will save checkpoint to densenet161_checkpoint.pth
+Checkpoint saved
+Validating the model
+Test Loss: 0.314
+Test Acc.: 0.920
+root@48c2ad98bbe4:/home/workspace/aipnd-project# python train.py --gpu flower  --learning_rate 0.01 --hidden_units 512 --epochs 10
+Data directory: flower
+Training on GPU.
+Architecture: densenet121
+Learning rate: 0.01
+Hidden units: 512
+Epochs: 10
+Traceback (most recent call last):
+  File "train.py", line 114, in <module>
+    main()
+  File "train.py", line 78, in main
+    dataloaders, class_to_idx = model_utils.get_loaders(args.data_dir)
+  File "/home/workspace/aipnd-project/model_utils.py", line 40, in get_loaders
+    'training' : datasets.ImageFolder(train_dir, transform=data_transforms['training']),
+  File "/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/datasets/folder.py", line 178, in__init__
+  File "/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/datasets/folder.py", line 75, in __init__
+  File "/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/datasets/folder.py", line 23, in find_classes
+FileNotFoundError: [Errno 2] No such file or directory: 'flower/train/'
+root@48c2ad98bbe4:/home/workspace/aipnd-project# python train.py --gpu flowers --learning_rate 0.01 --hidden_units 512 --epochs 10
+Data directory: flowers
+Training on GPU.
+Architecture: densenet121
+Learning rate: 0.01
+Hidden units: 512
+Epochs: 10
+training data loader retrieved
+testing data loader retrieved
+validation data loader retrieved
+/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/models/densenet.py:212: UserWarning: nn.init.kaiming_normal is now deprecated in favor of nn.init.kaiming_normal_.
+Pretrained model retrieved.
+GPU is availaible. Moving Tensors.
+Beginning model training
+/home/workspace/aipnd-project/model_utils.py:154: UserWarning: invalid index of a 0-dim tensor. This will be an error inPyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  running_loss += loss.data[0]
+Validating the model
+/home/workspace/aipnd-project/model_utils.py:174: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  inputs = Variable(inputs.float().cuda(), volatile=True)
+/home/workspace/aipnd-project/model_utils.py:175: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  labels = Variable(labels.long().cuda(), volatile=True)
+/home/workspace/aipnd-project/model_utils.py:180: UserWarning: invalid index of a 0-dim tensor. This will be an error inPyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  test_loss += criterion(output, labels).data[0]
+Epoch: 1/10  Train Loss: 4.958  Val. Loss: 3.868  Val. Acc.: 0.143
+Validating the model
+Epoch: 1/10  Train Loss: 3.552  Val. Loss: 3.046  Val. Acc.: 0.227
+Validating the model
+Epoch: 2/10  Train Loss: 1.244  Val. Loss: 2.765  Val. Acc.: 0.275
+Validating the model
+Epoch: 2/10  Train Loss: 2.738  Val. Loss: 2.512  Val. Acc.: 0.338
+Validating the model
+Epoch: 2/10  Train Loss: 2.580  Val. Loss: 2.504  Val. Acc.: 0.313
+Validating the model
+Epoch: 3/10  Train Loss: 2.220  Val. Loss: 2.467  Val. Acc.: 0.335
+Validating the model
+Epoch: 3/10  Train Loss: 2.517  Val. Loss: 2.477  Val. Acc.: 0.303
+Validating the model
+Epoch: 4/10  Train Loss: 0.643  Val. Loss: 2.160  Val. Acc.: 0.428
+Validating the model
+Epoch: 4/10  Train Loss: 2.371  Val. Loss: 2.317  Val. Acc.: 0.359
+Validating the model
+Epoch: 4/10  Train Loss: 2.409  Val. Loss: 2.191  Val. Acc.: 0.405
+Validating the model
+Epoch: 5/10  Train Loss: 1.580  Val. Loss: 2.151  Val. Acc.: 0.389
+Validating the model
+Epoch: 5/10  Train Loss: 2.329  Val. Loss: 2.344  Val. Acc.: 0.373
+Validating the model
+Epoch: 6/10  Train Loss: 0.268  Val. Loss: 2.168  Val. Acc.: 0.396
+Validating the model
+Epoch: 6/10  Train Loss: 2.338  Val. Loss: 2.130  Val. Acc.: 0.416
+Validating the model
+Epoch: 6/10  Train Loss: 2.221  Val. Loss: 2.105  Val. Acc.: 0.417
+Validating the model
+Epoch: 7/10  Train Loss: 1.215  Val. Loss: 2.033  Val. Acc.: 0.427
+Validating the model
+Epoch: 7/10  Train Loss: 2.341  Val. Loss: 2.013  Val. Acc.: 0.456
+Validating the model
+Epoch: 7/10  Train Loss: 2.240  Val. Loss: 2.143  Val. Acc.: 0.428
+Validating the model
+Epoch: 8/10  Train Loss: 2.373  Val. Loss: 2.160  Val. Acc.: 0.404
+Validating the model
+Epoch: 8/10  Train Loss: 2.299  Val. Loss: 2.058  Val. Acc.: 0.433
+Validating the model
+Epoch: 9/10  Train Loss: 0.847  Val. Loss: 1.986  Val. Acc.: 0.449
+Validating the model
+Epoch: 9/10  Train Loss: 2.205  Val. Loss: 2.300  Val. Acc.: 0.380
+Validating the model
+Epoch: 9/10  Train Loss: 2.281  Val. Loss: 2.027  Val. Acc.: 0.440
+Validating the model
+Epoch: 10/10  Train Loss: 1.788  Val. Loss: 1.924  Val. Acc.: 0.459
+Validating the model
+Epoch: 10/10  Train Loss: 2.216  Val. Loss: 2.004  Val. Acc.: 0.436
+Will save checkpoint to densenet121_checkpoint.pth
+Checkpoint saved
+Validating the model
+Test Loss: 1.972
+Test Acc.: 0.456
+root@48c2ad98bbe4:/home/workspace/aipnd-project# python predict.py --gpu  flowers
+usage: predict.py [-h] [--top_k TOP_K] [--category_names CATEGORY_NAMES]
+                  [--gpu]
+                  input checkpoint
+predict.py: error: the following arguments are required: checkpoint
+root@48c2ad98bbe4:/home/workspace/aipnd-project# python predict.py --gpu --top_k --category_names
+usage: predict.py [-h] [--top_k TOP_K] [--category_names CATEGORY_NAMES]
+                  [--gpu]
+                  input checkpoint
+predict.py: error: argument --top_k: expected one argument
+root@48c2ad98bbe4:/home/workspace/aipnd-project# python predict.py --gpu --top_k 10  --category_names
+usage: predict.py [-h] [--top_k TOP_K] [--category_names CATEGORY_NAMES]
+                  [--gpu]
+                  input checkpoint
+predict.py: error: argument --category_names: expected one argument
+root@48c2ad98bbe4:/home/workspace/aipnd-project# python predict.py --gpu --top_k 10  --category_names cat_to_name.json
+usage: predict.py [-h] [--top_k TOP_K] [--category_names CATEGORY_NAMES]
+                  [--gpu]
+                  input checkpoint
+predict.py: error: the following arguments are required: input, checkpoint
+root@48c2ad98bbe4:/home/workspace/aipnd-project# python predict.py --gpu --top_k 10  --category_names cat_to_name.json  flowers
+usage: predict.py [-h] [--top_k TOP_K] [--category_names CATEGORY_NAMES]
+                  [--gpu]
+                  input checkpoint
+predict.py: error: the following arguments are required: checkpoint
+root@48c2ad98bbe4:/home/workspace/aipnd-project# python predict.py --gpu --top_k 10  --category_names cat_to_name.json densenet121_checkpoint.pth
+usage: predict.py [-h] [--top_k TOP_K] [--category_names CATEGORY_NAMES]
+                  [--gpu]
+                  input checkpoint
+predict.py: error: the following arguments are required: checkpoint
+root@48c2ad98bbe4:/home/workspace/aipnd-project# python predict.py --gpu --top_k 10  --category_names cat_to_name.json checkpoint densenet121_checkpoint.pth
+Input file: checkpoint
+Checkpoint file: densenet121_checkpoint.pth
+Returning 10 most likely classes
+Category names file: cat_to_name.json
+Using GPU.
+/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/models/densenet.py:212: UserWarning: nn.init.kaiming_normal is now deprecated in favor of nn.init.kaiming_normal_.
+Pretrained model retrieved.
+Checkpoint loaded.
+Category names loaded
+Processing image
+Traceback (most recent call last):
+  File "predict.py", line 89, in <module>
+    main()
+  File "predict.py", line 64, in main
+    probabilities, classes = predict_utils.predict(args.input, model, use_gpu, results_to_show, args.top_k)
+  File "/home/workspace/aipnd-project/predict_utils.py", line 62, in predict
+    image = Image.open(input_path)
+  File "/opt/conda/lib/python3.6/site-packages/PIL/Image.py", line 2477, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoint'
+root@48c2ad98bbe4:/home/workspace/aipnd-project# python predict.py --gpu --top_k 10  --category_names cat_to_name.json flowers  densenet121_checkpoint.pth
+Input file: flowers
+Checkpoint file: densenet121_checkpoint.pth
+Returning 10 most likely classes
+Category names file: cat_to_name.json
+Using GPU.
+/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/models/densenet.py:212: UserWarning: nn.init.kaiming_normal is now deprecated in favor of nn.init.kaiming_normal_.
+Pretrained model retrieved.
+Checkpoint loaded.
+Category names loaded
+Processing image
+Traceback (most recent call last):
+  File "predict.py", line 89, in <module>
+    main()
+  File "predict.py", line 64, in main
+    probabilities, classes = predict_utils.predict(args.input, model, use_gpu, results_to_show, args.top_k)
+  File "/home/workspace/aipnd-project/predict_utils.py", line 62, in predict
+    image = Image.open(input_path)
+  File "/opt/conda/lib/python3.6/site-packages/PIL/Image.py", line 2477, in open
+    fp = builtins.open(filename, "rb")
+IsADirectoryError: [Errno 21] Is a directory: 'flowers'
+root@48c2ad98bbe4:/home/workspace/aipnd-project# python predict.py --gpu --top_k 10  --category_names cat_to_name.json flowers/test densenet121_checkpoint.pth
+Input file: flowers/test
+Checkpoint file: densenet121_checkpoint.pth
+Returning 10 most likely classes
+Category names file: cat_to_name.json
+Using GPU.
+/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/models/densenet.py:212: UserWarning: nn.init.kaiming_normal is now deprecated in favor of nn.init.kaiming_normal_.
+Pretrained model retrieved.
+Checkpoint loaded.
+Category names loaded
+Processing image
+Traceback (most recent call last):
+  File "predict.py", line 89, in <module>
+    main()
+  File "predict.py", line 64, in main
+    probabilities, classes = predict_utils.predict(args.input, model, use_gpu, results_to_show, args.top_k)
+  File "/home/workspace/aipnd-project/predict_utils.py", line 62, in predict
+    image = Image.open(input_path)
+  File "/opt/conda/lib/python3.6/site-packages/PIL/Image.py", line 2477, in open
+    fp = builtins.open(filename, "rb")
+IsADirectoryError: [Errno 21] Is a directory: 'flowers/test'
+root@48c2ad98bbe4:/home/workspace/aipnd-project# python predict.py --gpu --top_k 10  --category_names cat_to_name.json flowers/test/1 densenet121_checkpoint.pth
+1/   10/  100/ 101/ 102/ 11/  12/  13/  14/  15/  16/  17/  18/  19/
+root@48c2ad98bbe4:/home/workspace/aipnd-project# python predict.py --gpu --top_k 10  --category_names cat_to_name.json flowers/test/1 densenet121_checkpoint.pth
+Input file: flowers/test/1
+Checkpoint file: densenet121_checkpoint.pth
+Returning 10 most likely classes
+Category names file: cat_to_name.json
+Using GPU.
+/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/models/densenet.py:212: UserWarning: nn.init.kaiming_normal is now deprecated in favor of nn.init.kaiming_normal_.
+Pretrained model retrieved.
+Checkpoint loaded.
+Category names loaded
+Processing image
+Traceback (most recent call last):
+  File "predict.py", line 89, in <module>
+    main()
+  File "predict.py", line 64, in main
+    probabilities, classes = predict_utils.predict(args.input, model, use_gpu, results_to_show, args.top_k)
+  File "/home/workspace/aipnd-project/predict_utils.py", line 62, in predict
+    image = Image.open(input_path)
+  File "/opt/conda/lib/python3.6/site-packages/PIL/Image.py", line 2477, in open
+    fp = builtins.open(filename, "rb")
+IsADirectoryError: [Errno 21] Is a directory: 'flowers/test/1'
+root@48c2ad98bbe4:/home/workspace/aipnd-project# python predict.py --gpu --top_k 10  --category_names cat_to_name.json flowers/test/1/image_06743.jpg densenet121_checkpoint.pth
+Input file: flowers/test/1/image_06743.jpg
+Checkpoint file: densenet121_checkpoint.pth
+Returning 10 most likely classes
+Category names file: cat_to_name.json
+Using GPU.
+/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/models/densenet.py:212: UserWarning: nn.init.kaiming_normal is now deprecated in favor of nn.init.kaiming_normal_.
+Pretrained model retrieved.
+Checkpoint loaded.
+Category names loaded
+Processing image
+/home/workspace/aipnd-project/predict_utils.py:68: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  var_inputs = Variable(tensor.float().cuda(), volatile=True)
+Top 10 Classes for 'flowers/test/1/image_06743.jpg':
+Flower                         Probability
+------------------------------------------
+tree poppy                     0.24
+mexican aster                  0.18
+pink primrose                  0.09
+daffodil                       0.07
+tree mallow                    0.06
+yellow iris                    0.06
+hibiscus                       0.04
+balloon flower                 0.04
+wild pansy                     0.03
+petunia                        0.02
+root@48c2ad98bbe4:/home/workspace/aipnd-project# python predict.py --gpu --top_k 10  --category_names cat_to_name.json flowers/test/1/image_0675.jpg densenet121_checkpoint.pth
+image_06752.jpg  image_06754.jpg
+root@48c2ad98bbe4:/home/workspace/aipnd-project# python predict.py --gpu --top_k 10  --category_names cat_to_name.json flowers/test/1/image_06752.jpg densenet121_checkpoint.pth
+Input file: flowers/test/1/image_06752.jpg
+Checkpoint file: densenet121_checkpoint.pth
+Returning 10 most likely classes
+Category names file: cat_to_name.json
+Using GPU.
+/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/models/densenet.py:212: UserWarning: nn.init.kaiming_normal is now deprecated in favor of nn.init.kaiming_normal_.
+Pretrained model retrieved.
+Checkpoint loaded.
+Category names loaded
+Processing image
+/home/workspace/aipnd-project/predict_utils.py:68: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  var_inputs = Variable(tensor.float().cuda(), volatile=True)
+Top 10 Classes for 'flowers/test/1/image_06752.jpg':
+Flower                         Probability
+------------------------------------------
+hibiscus                       0.15
+poinsettia                     0.11
+petunia                        0.09
+watercress                     0.09
+mallow                         0.07
+tree mallow                    0.06
+pink primrose                  0.05
+peruvian lily                  0.04
+tree poppy                     0.03
+anthurium                      0.02
+root@48c2ad98bbe4:/home/workspace/aipnd-project# python predict.py --gpu --top_k 10  --category_names cat_to_name.json flowers/test/14/image_06052.jpg densenet121_checkpoint.pth
+Input file: flowers/test/14/image_06052.jpg
+Checkpoint file: densenet121_checkpoint.pth
+Returning 10 most likely classes
+Category names file: cat_to_name.json
+Using GPU.
+/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/models/densenet.py:212: UserWarning: nn.init.kaiming_normal is now deprecated in favor of nn.init.kaiming_normal_.
+Pretrained model retrieved.
+Checkpoint loaded.
+Category names loaded
+Processing image
+/home/workspace/aipnd-project/predict_utils.py:68: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  var_inputs = Variable(tensor.float().cuda(), volatile=True)
+Top 10 Classes for 'flowers/test/14/image_06052.jpg':
+Flower                         Probability
+------------------------------------------
+purple coneflower              0.51
+king protea                    0.14
+spear thistle                  0.08
+passion flower                 0.04
+barbeton daisy                 0.03
+tiger lily                     0.03
+colt's foot                    0.02
+alpine sea holly               0.02
+common dandelion               0.01
+bird of paradise               0.01
+root@48c2ad98bbe4:/home/workspace/aipnd-project# ^C
+root@48c2ad98bbe4:/home/workspace/aipnd-project#
